@@ -12,9 +12,9 @@ export default function CurrentGame() {
                             <iframe src="https://www.youtube.com/embed/ocmONiVun9M?si=M0E_pFfAy1W9semW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                         </div>
                         <div className="robocard">
-                            <a href="https://content.vexrobotics.com/docs/25-26/v5rc-push-back/docs/PushBack-GameManual-0.1.pdf" target="_blank">
+                            <a href="https://content.vexrobotics.com/docs/25-26/v5rc-push-back/docs/PushBack-GameManual-0.1.pdf" target="_blank" rel="noreferrer">
                                 <div className="robocard-header">Game Manual</div>
-                                <img className="roboCardItem" src={PushBackLogo} />
+                                <img className="roboCardItem" src={PushBackLogo} alt="Current Game Logo" />
                             </a>
                         </div>
                     </div>
