@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import CurrentGame from './pages/CurrentGame'
-import Schedule from './pages/Schedule'
 import Donate from './pages/Donate'
 import './css/styles.css';
 import './css/header.css';
@@ -21,7 +20,6 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/currentGame" element={<CurrentGame />} />
-                <Route path="/Schedule" element={<Schedule />} />
                 <Route path="/Donate" element={<Donate />} />
             </Routes>
             <Footer />
