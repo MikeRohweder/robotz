@@ -1,29 +1,59 @@
-name: Deploy to GoDaddy via FTP
+name: FTP Deploy
 
 on:
   push:
     branches:
       - master
+      - dev
+      - stage
+      - prod
 
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install dependencies & build
-        run: |
-          npm install
-          npm run build
+      - name: Build
+        run: npm run build
 
-      - name: Deploy to GoDaddy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy to Master FTP
+        if: github.ref == 'refs/heads/master'
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: build/
+          ftp-server: ${{ secrets.FTP_SERVER_MASTER }}
+          ftp-username: ${{ secrets.FTP_USERNAME_MASTER }}
+          ftp-password: ${{ secrets.FTP_PASSWORD_MASTER }}
+          local-dir: ./build
           server-dir: /
-          
+
+      - name: Deploy to Dev FTP
+        if: github.ref == 'refs/heads/dev'
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER_DEV }}
+          ftp-username: ${{ secrets.FTP_USERNAME_DEV }}
+          ftp-password: ${{ secrets.FTP_PASSWORD_DEV }}
+          local-dir: ./build
+          server-dir: /
+
+      - name: Deploy to Stage FTP
+        if: github.ref == 'refs/heads/stage'
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER_STAGE }}
+          ftp-username: ${{ secrets.FTP_USERNAME_STAGE }}
+          ftp-password: ${{ secrets.FTP_PASSWORD_STAGE }}
+          local-dir: ./build
+          server-dir: /
+
+      - name: Deploy to Prod FTP
+        if: github.ref == 'refs/heads/prod'
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER_PROD }}
+          ftp-username: ${{ secrets.FTP_USERNAME_PROD }}
+          ftp-password: ${{ secrets.FTP_PASSWORD_PROD }}
+          local-dir: ./build
+          server-dir: /
