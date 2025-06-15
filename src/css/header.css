@@ -1,0 +1,48 @@
+﻿.header{
+    display:flex;
+    flex-direction: column;
+    background-color:white;
+    align-items: center;
+}
+
+.header-logo {
+    display:flex;
+    max-width: 100%;
+    height:auto;
+
+}
+
+.header-nav-bar {
+    margin-top: 15px;
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    color:black;
+    height:max-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav-bar a {
+    text-decoration: none;
+}
+
+.header-nav-bar span {
+    padding:3px;
+}
+.header-nav-bar span.active{
+    background-color: blue;
+    color:white;
+}
+
+.header-nav-bar span:not(.active):hover{
+    background-color: red;
+    color:white;
+}
+.header-nav-bar a:not(:last-child)::after{
+    content: '\00a0 |\00a0  ';
+}
+
+.header hr{
+    width:75%;
+}

@@ -1,0 +1,38 @@
+﻿.main-body {
+    padding:3px;
+    display:flex;
+    flex-direction: column;
+    margin:15px;
+    background-color:beige;
+    height:100%;
+    color:black;
+    align-items: center;
+}
+
+.main-body h1 {
+    margin-top:5px;
+    font-size: 2em;
+}
+
+td {
+    padding-left:10px;
+}
+
+.about-pic{
+    margin:3px;
+}
+.in-text {
+    float:left;
+}
+
+.robocard {
+    background-color: #436bb6;
+    padding: 10px;
+    max-width: fit-content;
+}
+
+.card-header {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
