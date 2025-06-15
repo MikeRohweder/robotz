@@ -23,6 +23,16 @@ export default function Donate() {
                                 Your contribution today makes a difference for the future of tomorrow.<br /><br />
                                 Thank you for your RoboTZ support!
                             </span><br /><br />
+
+                            <div
+                                className="zeffy-button"
+                                data-form-id="e74405bb-b48a-4b73-ae13-8996a89bb3a3"
+                                data-color="#1c75bc"
+                                data-shape="rect"
+                                data-size="large"
+                            ></div>
+
+
                             <button
                                 className="donateButton"
                                 zeffy-form-link="https://www.zeffy.com/embed/donation-form/e74405bb-b48a-4b73-ae13-8996a89bb3a3?modal=true">Donate Now</button>
