@@ -11,7 +11,7 @@ export default function Home() {
                     <div className="robocard">
                         <a href="currentGame.html" target="_blank">
                             <div className="robocard-header">Current Game<br />Vex - Push Back</div>
-                            <img src={PushBackLogo} className="roboCardItem" />
+                            <img src={PushBackLogo} className="roboCardItem" alt="Current Game Logo" />
                         </a>
                     </div>
                 </div>

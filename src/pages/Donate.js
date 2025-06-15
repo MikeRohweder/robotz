@@ -28,7 +28,7 @@ export default function Donate() {
                                 zeffy-form-link="https://www.zeffy.com/embed/donation-form/e74405bb-b48a-4b73-ae13-8996a89bb3a3?modal=true">Donate Now</button>
                             <br /><br />
                             OR<br /><br />
-                            <img src={DonateQR} />
+                            <img src={DonateQR} alt="Donation QR Code" />
                         </div>
                     </div>
                 </section>

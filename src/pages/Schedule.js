@@ -10,7 +10,9 @@ export default function Schedule() {
                         width="800"
                         height="600"
                         frameBorder="0"
-                        scrolling="no">
+                        scrolling="no"
+                        title="RoboTZ Calendar"
+                    >
                     </iframe>
                 </section>
             </div>
