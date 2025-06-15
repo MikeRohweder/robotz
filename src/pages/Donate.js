@@ -1,5 +1,4 @@
 import React from 'react';
-import DonateQR from '../assets/donationQR.png';
 
 export default function Donate() {
     return (
