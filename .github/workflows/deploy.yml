@@ -3,7 +3,7 @@ name: Deploy to GoDaddy via FTP
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   ftp-deploy:
