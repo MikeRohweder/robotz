@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy to Dev FTP
         if: github.ref == 'refs/heads/dev'
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           ftp-server: ${{ secrets.FTP_HOST_DEV }}
           ftp-username: ${{ secrets.FTP_USERNAME }}
@@ -30,7 +30,7 @@ jobs:
 
       - name: Deploy to Stage FTP
         if: github.ref == 'refs/heads/stage'
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           ftp-server: ${{ secrets.FTP_HOST_STAGE }}
           ftp-username: ${{ secrets.FTP_USERNAME }}
@@ -40,7 +40,7 @@ jobs:
 
       - name: Deploy to Prod FTP
         if: github.ref == 'refs/heads/prod'
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           ftp-server: ${{ secrets.FTP_HOST_PROD }}
           ftp-username: ${{ secrets.FTP_USERNAME }}
