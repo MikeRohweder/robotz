@@ -18,42 +18,32 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to Master FTP
-        if: github.ref == 'refs/heads/master'
-        uses: SamKirkland/FTP-Deploy-Action@v4
-        with:
-          ftp-server: ${{ secrets.FTP_SERVER_MASTER }}
-          ftp-username: ${{ secrets.FTP_USERNAME_MASTER }}
-          ftp-password: ${{ secrets.FTP_PASSWORD_MASTER }}
-          local-dir: ./build
-          server-dir: /
-
       - name: Deploy to Dev FTP
         if: github.ref == 'refs/heads/dev'
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
         with:
-          ftp-server: ${{ secrets.FTP_SERVER_DEV }}
-          ftp-username: ${{ secrets.FTP_USERNAME_DEV }}
-          ftp-password: ${{ secrets.FTP_PASSWORD_DEV }}
+          ftp-server: ${{ secrets.FTP_HOST_DEV }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build
           server-dir: /
 
       - name: Deploy to Stage FTP
         if: github.ref == 'refs/heads/stage'
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
         with:
-          ftp-server: ${{ secrets.FTP_SERVER_STAGE }}
-          ftp-username: ${{ secrets.FTP_USERNAME_STAGE }}
-          ftp-password: ${{ secrets.FTP_PASSWORD_STAGE }}
+          ftp-server: ${{ secrets.FTP_HOST_STAGE }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build
           server-dir: /
 
       - name: Deploy to Prod FTP
         if: github.ref == 'refs/heads/prod'
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
         with:
-          ftp-server: ${{ secrets.FTP_SERVER_PROD }}
-          ftp-username: ${{ secrets.FTP_USERNAME_PROD }}
-          ftp-password: ${{ secrets.FTP_PASSWORD_PROD }}
+          ftp-server: ${{ secrets.FTP_HOST_PROD }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build
           server-dir: /
