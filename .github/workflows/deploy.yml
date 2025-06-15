@@ -24,9 +24,9 @@ jobs:
         if: github.ref == 'refs/heads/dev'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          ftp-server: ${{ secrets.FTP_HOST_DEV }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.FTP_HOST_DEV }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build
           server-dir: /
 
@@ -34,9 +34,9 @@ jobs:
         if: github.ref == 'refs/heads/stage'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          ftp-server: ${{ secrets.FTP_HOST_STAGE }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.FTP_HOST_STAGE }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build
           server-dir: /
 
@@ -44,8 +44,8 @@ jobs:
         if: github.ref == 'refs/heads/prod'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          ftp-server: ${{ secrets.FTP_HOST_PROD }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.FTP_HOST_PROD }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build
           server-dir: /
