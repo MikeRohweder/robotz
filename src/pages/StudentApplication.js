@@ -22,7 +22,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function StudentApplication() {
 
-    const [pdfUrl, setPdfUrl] = useState(null);
     const navigate = useNavigate();
 
 
@@ -30,7 +29,7 @@ export default function StudentApplication() {
         resolver: yupResolver(applicationSchema),
         mode: 'onBlur'
     });
-    const { reset, trigger } = methods;
+    const { trigger } = methods;
 
 
     const [tabIndex, setTabIndex] = useState(0);
@@ -141,7 +140,7 @@ export default function StudentApplication() {
             printField("Questionnaire", "", true);
             printField("Interests", "", false, true);
 
-            if (data.interestRankings == undefined) {
+            if (data.interestRankings === undefined) {
                 data.interestRankings = [
                     'Programming',
                     'Building',
