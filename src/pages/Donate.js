@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Donate() {
+export default function StudentForms() {
     return (
         <main>
             <iframe

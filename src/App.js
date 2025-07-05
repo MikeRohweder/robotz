@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import CurrentGame from './pages/CurrentGame'
 import Donate from './pages/Donate'
+import StudentApplication from './pages/StudentApplication'
+import PDFPreview from './pages/PDFPreview'
 import './css/styles.css';
 import './css/header.css';
 import './css/logo.css';
@@ -21,6 +23,8 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/currentGame" element={<CurrentGame />} />
                 <Route path="/Donate" element={<Donate />} />
+                <Route path="/StudentApplication" element={<StudentApplication />} />
+                <Route path="/pdf-preview" element={<PDFPreview />} />
             </Routes>
             <Footer />
         </Router>
