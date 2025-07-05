@@ -1,4 +1,3 @@
-import * as yup from 'yup';
 import { studentInfoSchema } from './studentInfoSchema';
 import { parentInfoSchema } from './parentInfoSchema';
 import { teacherInfoSchema } from './teacherInfoSchema';
