@@ -238,6 +238,7 @@ export default function StudentApplication() {
         });
 
         setTimeout(() => {
+            navigate('pdf-preview')
             window.open(blobUri, '_blank');
         }, 3000);
 
