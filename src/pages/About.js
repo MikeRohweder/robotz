@@ -4,7 +4,7 @@ export default function About() {
     return (
         <main>
             <section className="hero">
-                <h2>Welcome to RoboTZ!</h2>
+                <h2>Welcome to Robo!</h2>
                 <p>Robo-Tech Zone is a community-based nonprofit organization that facilitates competitive robotics teams.</p>
                 <p>Our program partners with local public, private, partnership programs, and homeschools to offer Michiana students a rewarding educational opportunity in Science, Technology, Engineering, and Mathematics.</p>
                 <p>Students apply innovative STEM concepts to design, build, and code competitive robots.</p>
