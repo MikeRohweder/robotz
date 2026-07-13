@@ -5,7 +5,7 @@ export default function About() {
         <main>
             <section className="hero">
                 <h2>Welcome to RoboTZ!</h2>
-                <p>Robo-Tech Zone is a community-based nonprofit organization that facilitates competitive robotics teams.</p>
+                <p>Robo-Tech Zone is a community-based nonprofit organization that facilitates robotics teams.</p>
                 <p>Our program partners with local public, private, partnership programs, and homeschools to offer Michiana students a rewarding educational opportunity in Science, Technology, Engineering, and Mathematics.</p>
                 <p>Students apply innovative STEM concepts to design, build, and code competitive robots.</p>
                 <p>The team of RoboTZ coaches/mentors guide students through concepts of construction, coding, and the engineering process.</p>
