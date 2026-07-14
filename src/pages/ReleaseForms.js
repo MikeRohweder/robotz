@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -56,14 +56,14 @@ export default function ReleaseForms() {
     }, [setValue]);
 
     const sigPad = useRef(null);
-    const [signed, setSigned] = useState(false);
+    //const [signed, setSigned] = useState(false);
 
     const Err = ({ name }) => errors[name] ? <div className="error">{errors[name]?.message}</div> : null;
 
     const clearSignature = () => {
         if (!sigPad.current) return;
         sigPad.current.clear();
-        setSigned(false);
+        //setSigned(false);
         setValue('parentSignature', '');
         setValue('signatureTimestamp', '');
     };
@@ -91,7 +91,7 @@ export default function ReleaseForms() {
         ctx.font = '16px monospace';
         ctx.fillText(timestamp, 20, 130);
 
-        setSigned(true);
+        //setSigned(true);
         setValue('parentSignature', name);
         setValue('signatureTimestamp', timestamp);
     };
@@ -266,7 +266,7 @@ export default function ReleaseForms() {
                                         canvasProps={{ width: 700, height: 160, className: 'sigCanvas' }}
                                         onEnd={() => {
                                             // If they draw by hand, capture timestamp automatically
-                                            setSigned(true);
+          //                                  setSigned(true);
                                             setValue('parentSignature', 'drawn');
                                             setValue('signatureTimestamp', new Date().toLocaleString());
                                         }}
