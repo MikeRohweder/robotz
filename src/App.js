@@ -13,6 +13,7 @@ import './css/header.css';
 import './css/logo.css';
 import './css/main-body.css';
 import './css/site.css';
+import ReleaseForms from './pages/ReleaseForms';
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/Donate" element={<Donate />} />
                 <Route path="/StudentApplication" element={<StudentApplication />} />
                 <Route path="/pdf-preview" element={<PDFPreview />} />
+                <Route path="/release-forms" element={<ReleaseForms />} />
             </Routes>
             <Footer />
         </Router>

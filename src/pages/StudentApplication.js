@@ -219,13 +219,13 @@ export default function StudentApplication() {
         formData.append('pdf', pdfBlob, 'student-application.pdf');
         formData.append('name', data.studentName);
 
-        const response = await fetch('https://robotz-backend.onrender.com/send-form', {
-            method: 'POST',
-            body: formData,
-        });
-        if (!response.ok) {
-            throw new Error("Failed to Send PDF");
-        }
+        //const response = await fetch('https://robotz-backend.onrender.com/send-form', {
+        //    method: 'POST',
+        //    body: formData,
+        //});
+        //if (!response.ok) {
+        //    throw new Error("Failed to Send PDF");
+        //}
 
         const blobUri = URL.createObjectURL(pdfBlob);
         localStorage.setItem('pdfPreviewUrl', blobUri);
@@ -236,10 +236,12 @@ export default function StudentApplication() {
             isLoading: false,
             autoClose: 3000,
         });
+        localStorage.setItem('applicationData', JSON.stringify(data));
+        setTimeout(() => { navigate('/release-forms') }, 3000);
 
-        setTimeout(() => {
-            navigate('pdf-preview')
-        }, 3000);
+        //setTimeout(() => {
+        //    navigate('pdf-preview')
+        //}, 3000);
 
     } catch (error) {
         toast.update(loadingToast, {
