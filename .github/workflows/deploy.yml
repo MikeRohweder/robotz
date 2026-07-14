@@ -15,6 +15,7 @@ jobs:
 
       - name: Install dependencies & build
         run: |
+          rm -rf build
           npm install
           npm run build
 
