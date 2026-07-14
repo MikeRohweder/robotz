@@ -8,7 +8,7 @@ export default function Header() {
                 <img className="logo-header" src={logo} alt="RoboTZ Logo"/>
                 <nav>
                     <ul>
-                        <li><a href="/">Home</a></li>
+                        <li><a href="/">Homes</a></li>
                         <li><a href="/currentGame">Current Game</a></li>
                         <li><a href="/donate">Donate</a></li>
                         <li><a href="/StudentApplication">Student Application</a></li>
